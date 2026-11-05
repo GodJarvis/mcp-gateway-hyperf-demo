@@ -4,7 +4,7 @@ import { Alert, Button, Card, Input, Space, Steps, Typography, message } from 'a
 
 export default function GuidePage() {
   const [mcpKey, setMcpKey] = useState(import.meta.env.VITE_MCP_API_KEY ?? 'dev-mcp-key')
-  const endpoint = `${window.location.protocol}//${window.location.hostname}:8000/mcp`
+  const endpoint = `${window.location.protocol}//${window.location.hostname}:9501/mcp`
 
   const config = JSON.stringify(
     {

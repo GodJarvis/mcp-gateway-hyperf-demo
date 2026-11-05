@@ -38,8 +38,8 @@ docker compose up --build
 ```
 
 - 管理台：<http://localhost:5173>
-- 后端健康检查：<http://localhost:8000/api/health>
-- MCP Endpoint：<http://localhost:8000/mcp>
+- 后端健康检查：<http://localhost:9501/api/health>
+- MCP Endpoint：<http://localhost:9501/mcp>
 
 开发默认 Admin Token 为 `dev-admin-key`，MCP Token 为 `dev-mcp-key`，仅适合本地演示。
 
@@ -68,7 +68,7 @@ npm run dev
 ```json
 {
   "type": "streamable-http",
-  "url": "http://localhost:8000/mcp",
+  "url": "http://localhost:9501/mcp",
   "headers": {
     "Authorization": "Bearer dev-mcp-key"
   }

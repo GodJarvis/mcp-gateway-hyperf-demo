@@ -8,6 +8,6 @@ RUN composer install --no-dev --prefer-dist --no-interaction --optimize-autoload
 COPY . .
 RUN mkdir -p data runtime && chmod +x bin/hyperf.php
 
-EXPOSE 8000
+EXPOSE 9501
 
 CMD ["php", "bin/hyperf.php", "start"]

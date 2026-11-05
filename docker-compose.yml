@@ -4,7 +4,7 @@ services:
       context: ./backend
     environment:
       HTTP_HOST: 0.0.0.0
-      HTTP_PORT: 8000
+      HTTP_PORT: 9501
       DATABASE_PATH: data/gateway.db
       ADMIN_API_KEY: ${ADMIN_API_KEY:-dev-admin-key}
       MCP_API_KEY: ${MCP_API_KEY:-dev-mcp-key}
@@ -12,7 +12,7 @@ services:
       ALLOW_PRIVATE_TARGETS: ${ALLOW_PRIVATE_TARGETS:-true}
       MCP_ALLOWED_ORIGINS: ${MCP_ALLOWED_ORIGINS:-http://localhost:5173}
     ports:
-      - "8000:8000"
+      - "9501:9501"
     volumes:
       - gateway-data:/app/data
     restart: unless-stopped

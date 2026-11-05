@@ -8,11 +8,11 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://127.0.0.1:8000',
+        target: 'http://127.0.0.1:9501',
         changeOrigin: true,
       },
       '/mcp': {
-        target: 'http://127.0.0.1:8000',
+        target: 'http://127.0.0.1:9501',
         changeOrigin: true,
       },
     },
