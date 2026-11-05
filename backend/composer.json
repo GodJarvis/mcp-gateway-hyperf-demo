@@ -1,0 +1,40 @@
+{
+    "name": "demo/mcp-gateway-hyperf",
+    "description": "Dynamic Streamable HTTP MCP gateway built with Hyperf 3.2 and PHP 8.5",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.5",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
+        "ext-swoole": "*",
+        "hyperf/command": "~3.2.0",
+        "hyperf/config": "~3.2.0",
+        "hyperf/di": "~3.2.0",
+        "hyperf/engine": "^2.10",
+        "hyperf/framework": "~3.2.0",
+        "hyperf/guzzle": "~3.2.0",
+        "hyperf/http-server": "~3.2.0",
+        "hyperf/logger": "~3.2.0",
+        "opis/json-schema": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {},
+        "audit": {"block-insecure": true},
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "start": ["Composer\\Config::disableProcessTimeout", "@php bin/hyperf.php start"],
+        "test": "@php tests/run.php"
+    }
+}
