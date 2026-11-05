@@ -19,4 +19,4 @@ Router::patch('/api/tools/{id}/status', [AdminController::class, 'setToolStatus'
 Router::delete('/api/tools/{id}', [AdminController::class, 'deleteTool']);
 Router::post('/api/tools/{id}/test', [AdminController::class, 'testTool']);
 Router::get('/api/audit-logs', [AdminController::class, 'listAuditLogs']);
-Router::post('/mcp', [McpController::class, 'handle']);
+Router::addRoute(['GET', 'POST', 'DELETE', 'OPTIONS'], '/mcp', [McpController::class, 'handle']);
